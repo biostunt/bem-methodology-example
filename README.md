@@ -7,6 +7,7 @@
 ## Используемые технологии
 
 -   typescript
+-   jquery
 -   html
 -   scss
 -   parcel-bundler
