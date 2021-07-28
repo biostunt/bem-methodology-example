@@ -1,0 +1,299 @@
+body, html {
+    margin: 0;
+    padding: 0;
+
+}
+
+.image {
+    display: block;
+    &_svg {
+        min-width: 15px;
+        min-height: 15px;
+    }
+    &_png {
+        width: auto;
+        height: auto;
+    }
+}
+
+.text {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    &__title {
+        color: #0ED999;
+        font-weight: 500;
+        font-size: 1.75rem;
+        text-decoration: underline;
+    }
+    &__paragraph {
+        font-size: 1.25rem;
+    }
+    &__link {
+        font-weight: 500;
+        font-size: 1.75rem;
+    }
+    &_bolder {
+        font-weight: 600;
+    }
+}
+
+.button {
+    transition: 0.25s;
+    &:hover {
+        transition: 0.25s;
+        border-radius: .5rem;
+        box-shadow: 0 0 5px 0 #133042;
+        cursor: pointer;
+    }
+}
+
+.header {
+    &__container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 10vh;
+        user-select: none;
+        background-color: #0ED999;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    &__logo {
+        &__image {
+            width: auto;
+            height: 100%;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    &__menu {
+        margin: 0 2rem;
+        width: 50wh;
+        color: #133042;
+    }
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    &__item {
+        padding: 0.75rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 .5rem;
+        
+        &__icon {
+            // border-radius: 50%;
+            // border: 1px solid #133042;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+
+        &__title {
+            margin-left: .5rem;
+        }
+        
+    }
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__page {
+        margin-top: 12vh;
+    }
+    &__container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+}
+
+.about {
+    &__container {}
+    &__title {
+            text-align: center;
+        }
+    &__description {
+        margin: 1rem;
+        padding: 1rem 3rem;
+        width: 50%;
+        border-radius: 1rem;
+        box-shadow: 0 0 5px 0 gray;
+        height: auto;
+        
+        &__text {
+            margin-top: 2rem;
+        }
+
+    }
+    &__cards {
+        margin-top: 2rem;
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.card {
+    width: 200px;
+    height: 350px;
+    border-radius: 1rem;
+    padding: .75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__icon {
+        border-radius: 50%;
+        box-shadow: 0 0 5px 0 #133042;
+        width: 150px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &__image {
+            width: 50%;
+            height: 50%;
+        }
+    }
+    &__title {
+        color: #133042 !important;
+        text-decoration: underline;
+    }
+    &__text {
+        text-align: center;
+    }
+}
+
+.products {
+    &__container {}
+    &__title {
+        text-align: center;
+    }
+    &__list {
+        width: 75%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
+
+.product {
+    margin: 1rem;
+    padding: 1rem;
+    width: 10vw;
+    //height: 30vh;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 0 silver;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1fr 2fr 1fr;
+    transition: 0.25s;
+    &:hover {
+        transition: 0.25s;
+        background-color: silver;
+        box-shadow: 0 0 10px 10px silver;
+        cursor: pointer;
+    }
+    &__icon {
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__title {
+        text-align: center;
+    }
+    &__description {
+        font-size: 1rem!important;
+    }
+    &__price {
+        text-align: center;
+    }
+    
+}
+
+.contacts {
+    //bug
+    width: 100%;
+
+    &__container {}
+
+    &__title {
+        margin: 1rem 0;
+    }
+
+    &__information {
+        margin: 1rem;
+        padding: 1rem;
+        width: 50%;
+        border-radius: 1rem;
+        box-shadow: 0 0 5px 0 gray;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &__line {
+            width: 100%;
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 3fr;
+            &__key {
+                text-decoration: none;
+                color: #133042;
+            }
+            &__value {
+                margin-left: 1rem;
+            }
+        }
+    }
+    &__feedback {
+        margin: 1rem;
+        padding: 1rem;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &__input {
+            margin: 1rem;
+            padding: 1rem;
+            width: 50%;
+            border-radius: 1rem;
+            &:focus {
+                outline: none;
+            }
+        }
+        &__button {
+            border-radius: 1rem;
+            box-shadow: 0 0 5px 0 gray;
+            padding: 1rem;
+            margin: 1rem;
+            &:hover {
+                background-color: silver;
+                box-shadow: 0 0 5px 5px silver;
+            }
+        }
+    }
+}
